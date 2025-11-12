@@ -1,0 +1,37 @@
+# Merge : Merge krne k liye ek part dono dataframe mai same hona chahiye jise id kehte hai.
+
+#  Agr ek column k elements alag hai to common elements choose kiye jate hai.
+pd.merge(var2,var1,on="Name")
+
+
+# How parameter : uses for reperesenting missing data  how = inner or left or right or 
+pd.merge(var1,var2,how="right") # right vale var ka all data.
+pd.merge(var1,var2,how="outer") # for all data
+
+
+
+# for checking which data is present or not : use "indicator"= True  parameter
+#  
+pd.merge(var1,var2,how="outer",indicator=True)
+
+#  if both columns are same  : then use 'left_index' = True , 'right_index'=True parameter to see all data .and we can give ,new name to these columns by 'suffixes' parameter 
+
+****************************************************
+
+# Concat uses for join two series or dataframe.
+
+#  merge() is used for joining data frames based on a common column or index, concat() is used for concatenating data frames either vertically or horizontally.
+
+# In cancat fxn we gives data in list []
+
+# concat dataframes 
+
+pd.concat([d1,d2])
+
+# merge according to the axis .
+
+ # axis = 1, merge according to the column.
+
+# we can remoce NaN : use "join=outer or inner" parameter , outer shows union and inner shows intersection
+
+# "key" parameter : uses for  making key for merging data

@@ -1,0 +1,67 @@
+# When we Want to get index number or index info : use ".index" fxn
+
+csv_1.index
+
+# # When we Want to get column number or column info : use ".columns" fxn
+
+csv_1.columns
+
+# when we want minValue , max value , count or any information : use "describe" fxn
+
+csv_1.describe()
+
+# For get fixed amount of data from a larger data :  use
+
+# head() fxn = gives data up to 5 from top or you can give parameter to head(2)
+# tail() fxn = gives data up to 5 from bottom  
+
+csv_1.head()
+
+csv_1.tail()
+
+# Get Data upto fixed column or row :  use slicing just like string
+
+print(csv_1[25:29])
+
+print(csv_1[:6])
+
+print(csv_1[45:])
+
+
+# type :
+
+print(type(csv_1))
+
+# if you want to show index inside an array then : use "index.array"
+
+csv_1.index.array
+
+# Convert the data into 'numpy' array : use ".to_numpy" fxn
+
+csv_1.to_numpy()
+
+# making array of our file : using numpy and "asarray"() fxn
+
+import numpy as np;
+
+
+v = np.asarray(csv_1)
+v
+
+# Sort an array to decending order : using "sort_index(axis=, ascending=Flase)" fxn., axis = 0 means row wise sorting
+
+csv_1.sort_index(axis=0,ascending = False)
+csv_1
+
+nging any data you want : using "loc[row,colm]" fxn
+
+# we can get a particular data using loc fxn : loc[[row],[colm]]
+
+# Get data using iloc fxn : .iloc[indexRow,indexColumn]
+
+
+# Drop data from the file : usign "drop("ColumnName",axis)" fxn ,axis= 1 for column
+
+csv_1.drop("Age",axis=1)  # column gayab axis = 1
+
+csv_1.drop(1,axis=0) # row gayab axis=0

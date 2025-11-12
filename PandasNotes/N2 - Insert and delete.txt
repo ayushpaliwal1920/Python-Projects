@@ -1,0 +1,17 @@
+Inserting a New Column
+
+By direct assignment:df.insert(1, "Gender", ["F", "M"])   # insert at column index 1
+
+
+Inserting a New Row
+
+Using loc:
+
+df.loc[2] = ["Charlie", 22, "M", "Bangalore", 27]  
+
+Using append (deprecated, but still seen):
+
+df = df.append({"Name": "David", "Age": 28, "Gender": "M", "City": "Pune", "Age_in_5yrs": 33}, ignore_index=True)
+
+
+DELETE : using del and pop function.

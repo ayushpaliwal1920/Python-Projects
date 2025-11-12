@@ -1,0 +1,40 @@
+Difference Between CSV and XLS(Excel) File Formats:
+
+Csv file is plain text format in which values are seperated by commas (comma seperated values).
+XLS File Format is an Excel Sheets binary file format which holds information about all the worksheets in a file , including both content and formatting.
+
+. CSV (Comma-Separated Values)  :
+
+Format: Plain text file where values are separated by commas.
+
+Extension: .csv
+
+Size: Small (lightweight, no formatting).
+
+Readable: Can be opened in Notepad, Excel, Python, R, etc.
+
+Best For: Storing and transferring tabular data quickly.
+
+Limitations:
+
+No formatting (colors, fonts, bold text).
+
+Cannot store formulas, charts, or multiple sheets.
+
+2. XLS / XLSX (Excel Files)  :
+
+Format: Binary (XLS) or XML-based (XLSX).
+
+Extension: .xls (older Excel) / .xlsx (newer Excel).
+
+Size: Larger than CSV (because it stores formatting + metadata).
+
+Readable: Best opened in MS Excel, also in Pandas (read_excel).
+
+Best For: Data that needs formatting, formulas, charts, multiple sheets.
+
+Advantages:
+
+Can store multiple sheets.
+
+Supports formulas, charts, formatting.

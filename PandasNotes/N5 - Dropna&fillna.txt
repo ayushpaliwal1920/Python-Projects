@@ -1,0 +1,62 @@
+
+#  Drop missing Data : using 'dropna()' fxn
+
+var.dropna()
+
+#    parameters in drop fxn :
+
+#    axis parameter for droping data along a axis like rows or columns. axis =1(along row),0 for along column
+
+
+var.dropna(axis=1)
+
+#   remove row which is null for every column : use "how= 'any' or 'all' parameter
+
+var.dropna(how='all') # use of "any" will remove every none value
+
+
+#   Removing null value along a particular column : use "subset=[]" Parameter.
+
+var.dropna(subset=["City"])
+
+#   Remove null data and create a neew data  = using "inplace=" parameter
+
+var.dropna(inplace=True)
+var
+
+#   Thres parameter : remove column which only contains only one null value "thres = 1" for one null value 1 , for containing two null value use 2
+
+var.dropna(thresh= 1)
+
+********************************************************************************
+
+#       Fillna fxn : for filling null values :
+
+var = pd.read_csv("C:\\PythonProjects\\Jupyter_Projects\\students_large.csv")
+var
+
+var.fillna("PYTHON-AYUSH")
+
+#   to fill a particular data of a particular column z: pass dict ans pass value as an key value pair
+
+var.fillna({"Age":90,"Department":"Nothing","City":"No home"})
+
+#       fill the null value with previous or next following data : use "method=ffill or bfill" parameter 
+
+var.fillna(method="ffill") # this method is deprecated for this version so use
+
+var.ffill() # or var.bfill()
+
+#        fill along axis :
+
+var.ffill(axis=0) # along row 
+
+#       inplace parameter : inplace=False (Default Behavior): When inplace is set to False (which is the default for most Pandas methods), the operation returns a new DataFrame or Series with the modifications.The original object remains unchanged.
+
+var.fillna(12,inplace=False)
+
+#       limit paramter : fill the null space as per the limit along column.
+
+var.fillna("Ayush",limit=2) # in columns only 2 null values will be filled by Ayush.
+
+

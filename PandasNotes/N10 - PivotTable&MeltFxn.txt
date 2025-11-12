@@ -1,0 +1,26 @@
+# we want the table vertically or reshaped vertically : use melt fxn
+
+pd.melt(var)
+
+# if we want to make a specif data as id :  use 'id_vars' parameter
+
+pd.melt(var,id_vars=["day"]) # here data of day is working as a id.
+
+# we can customize name : use var_name parameter
+
+pd.melt(var,id_vars=["day"],var_name="python") 
+
+
+# The pivot function in Pandas is a method used to reshape data by transforming rows into columns. The Pandas pivot function comes into play when there's a need to rearrange data from a “long” format to a “wide” format.
+
+var_2 = pd.DataFrame({"day":["day1","day2","day3","day4","day5","day6"],"St_name":["Ayush","dara","sara","Ayush","dara","sara"],"eng_num":[10,12,11,14,11,10],"math_num":[100,32,41,14,11,60]})
+
+var_2
+
+# set acoording to the student name : use pivot fxn 
+
+var_2.pivot(index="day",columns="St_name")
+
+# if we want a single data : use 'value' keyword
+
+var_2.pivot(index="day",columns="St_name",values="eng_num")

@@ -1,0 +1,41 @@
+##### for modifying or changing a large number of data which is in csv file we use pythonor panda.
+
+###### Read CSV => var = pd.read_csv("path\name.csv") 
+###### use double backslash at the starting and where sigle backslash is!
+
+###### Get rows to the particular indices :  using "nrows= " attribute.
+
+
+######  Get Particular column : using "usecols=["Age","name"]  or usecols =[0,1,2]" attribute
+
+
+###### Skip any row : use skiprows=[] or skiprows = reange(5,25)
+
+
+###### Change any column into index   : using Index_col
+
+###### Make header or change header : using parameter "header"= row number
+
+
+###### Change name of header : using name parameter name = []
+
+
+###### prefix parameter : error is showing ,That’s because in newer versions of Pandas (>=2.0), the prefix argument was removed from read_csv().
+
+csv_6 = pd.read_csv("C:\\PythonProjects\\Jupyter_Projects\\students_large.csv" , header=None )
+
+###### another way 
+csv_6.columns = [f"Col{i}" for i in range(csv_6.shape[1])]  
+
+#csv_6.shape[0] → number of rows
+#csv_6.shape[1] → number of columns
+
+print(csv_6)
+
+
+###### Make int to Float Data : using "dtype= []" parameter.
+
+csv_1 = pd.read_csv("C:\\PythonProjects\\Jupyter_Projects\\students_large.csv", dtype={"Maths": "float" ,"Physics":"float","Chemistry":"float"})
+
+print(csv_1)
+

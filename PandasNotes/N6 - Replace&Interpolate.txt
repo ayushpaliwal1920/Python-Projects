@@ -1,0 +1,66 @@
+# replace fxn : uses "to_replace= which one wants to replace" and "value = the value should be" parameter.
+
+var.replace(to_replace=19,value=105)
+
+# many value replaced by 1 value :
+
+var.replace(['S001','S002','S003','S004','S005','S006','S007','S008','S009'],99)
+
+
+# replace using "regex" parameter  : use for replacing ALphabetical data
+
+var.replace("[A-Za-z]","A",regex=True)
+
+var.replace("[A-Z]","A",regex=True)
+
+
+
+# Replace using dictionary :
+
+var.replace({"Name":'[A-Z]'},"Ayush",regex=True)
+
+
+# replace with backword or forward data : using "method" parameter
+
+var.replace(1,method="ffill")
+
+# limit parameter : replace(wantreplace , bywhom, limit  ) to the limit
+
+var.replace(1,"Ayush",limit=3)
+
+
+# inplace parameter: changes in original data
+
+var.replace("Student","Ayush",inplace=True)
+
+
+*************************************************
+
+# Interpolate fxn : used for filling missing data automatically. by observing sequence of previous data .
+
+
+
+var1.interpolate()  # for int only not for alphabets
+
+# methods:{linear,time, index , values , nearest , zero , silnear , quadratic , cubic , barycentric , krigh , polynomial , spline , piecewise_polynomial , from_derivatives , pchip , akima }
+
+var1.interpolate("linear")
+
+# axis paramter : axis = 0 column by column
+
+var1.interpolate(axis=0)  # dataframe should be commom or same means datavalues should be of same datatype
+
+
+# limit parameter and its direction forward or backward  :   using limit_direction = "f/backward or b0th"
+
+var1.interpolate(limit_direction="forward",limit=5) # forward mai aage se , backward mai piche se
+
+# limit area parameter :  It defines a restriction on the area where consecutive NaNs are allowed to be filled.
+
+var1.interpolate(limit_area="outside")
+
+
+#  inplace parameter : placing all data in the original data 
+
+var1.interpolate(inplace=True)
+var1
